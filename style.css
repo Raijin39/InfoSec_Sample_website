@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/*Home*/
+.home{
+    display: flex;
+    height: 100vh;
+    background: url("images/banner.jpg") no-repeat center;
+    color: red;
+    min-height: 500px;
+    max-height: 720px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 30px;
+}
+.home .home-content .text-1{
+    font-size: 25px;
+    animation: slideInLeft 0.4s linear;
+}
+.home .home-content .text-2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: -3px;
+    animation: slideInRight 0.4s linear;
+}
+.home .home-content .text-3{
+    font-size: 25px;
+    animation: slideInLeft 0.4s linear;
+}
+.home .home-content a{
+    display: inline-block;
+    background: red;
+    color: white;
+    font-size: 20px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 10px;
+    animation: slideInRight 0.4s linear;
+}
+.home .home-content a:hover{
+    color: aqua;
+    background: turquoise;
+    transform: scale(1.05);
+}
+
+/*Style for About*/
+section{
+    padding: 20px 0;
+}
+.About{
+    display: flex;
+    background: url("images/banner-5.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: scroll;
+    font-family: 'montserrat', sans-serif;
+}
+.About .title{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+.About .About-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.About .About-content .left{
+    width: 45%;
+}
+.About .About-content .left img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.About .About-content .right{
+    width: 55%;
+}
+.About .About-content .right text{
+    margin-bottom: 20px;
+}
+.About .About-content .right p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+/*Style for Services*/
+.Services{
+    color: black;
+    background: skyblue;
+}
+.Services .title{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 40px;
+}
+.Services .Services-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+.Services .Services-content .card{
+    width: calc(33% - 20px);
+    background: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+}
+.Services .Services-content .card:hover{
+    background: aqua;
+}
+.Services .Services-content .card .box{
+    transition: all 0.3s ease;
+}
+.Services .Services-content .card .box:hover{
+    transform: scale(1.05);
+}
+.Services .Services-content .card img{
+    height: 60px;
+    width: 60px;
+}
+.Services .Services-content .text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.Services .Services-content p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+/*Style for Skill*/
+.Skills{
+    display: flex;
+    background: url("images/banner-3.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'montserrat', sans-serif;
+    font-size: 18px;
+}
+.Skills.title{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+.Skills .Skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.Skills .Skills-content .collumn{
+    width: calc(50% - 30px);
+}
+.Skills .Skills-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.Skills .Skills-content .left p{
+    text-align: justify;
+    font-size: 18px;
+}
+.Skills .Skills-content .left a{
+    display: inline-block;
+    background: red;
+    color: white;
+    font-size: 20px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.Skills .Skills-content .left a:hover{
+    color: aqua;
+    background: turquoise;
+    transform: scale(1.05);
+}
+.Skills .Skills-content .right .bar{
+    margin-bottom: 15px;
+}
+.Skills .Skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.Skills .Skills-content .right .info:hover{
+    color: red;
+}
+.Skills .Skills-content .right span{
+    font-weight: 600;
+    font-size: 18px;
+    padding: 5px;
+}
+.Skills .Skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+.Skills .Skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background: tomato;
+}
+.Skills .Skills-content .right .html::before{
+    width: 95%;
+}
+.Skills .Skills-content .right .css::before{
+    width: 85%;
+}
+.Skills .Skills-content .right .js::before{
+    width: 82%;
+}
+.Skills .Skills-content .right .php::before{
+    width: 80%;
+}
+.Skills .Skills-content .right .mysql::before{
+    width: 92%;
+}
+
+/*Style for Comment*/
+.Comment{
+    display: flex;
+    background: url("images/banner-4.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+.Comment .title{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+
+
+/*Style for Contact*/
+/*Style for Contact*/
+.Contact{
+    display: flex;
+    background: url("images/banner-4.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+.Contact .title{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+.Contact .Contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.Contact .Contact-content .collumn{
+    width: calc(50% - 30px);
+}
+.Contact .Contact-content .collumn .text{
+    color: red;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.Contact .Contact-content .left p{
+    font-size: 18px;
+    text-align: justify;
+}
+.Contact .Contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.Contact .Contact-content .row .info{
+    margin-left: 30px;
+}
+.Contact .Contact-content .left img{
+    height: 20px;
+    width: 20px;
+}
+.Contact .Contact-content .info .head{
+    color: red;
+    font-weight: 600;
+    padding: 5px, 0;
+}
+.Contact .Contact-content .info .sub-title{
+    font-weight: 600;
+}
+.Contact .right form .fields{
+    display: flex;
+}
+.Contact .right form .field,
+.Contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.Contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.Contact .right form .name{
+    margin-right: 10px;
+}
+.Contact .right form .email{
+    margin-left: 10px;
+}
+.Contact .right form .field input,
+.Contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+}
+.Contact .right form .field input:focus,
+.Contact .right form .textarea textarea:focus{
+    border-color: red;
+}
+.Contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.Contact .right form .button{
+    height: 50px;
+    width: 150px;
+}
+.Contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    background: red;
+    border: 2px solid red;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.Contact .right form .button button:hover{
+    color: white;
+    border: 2px solid white;
+    background: turquoise;
+}
+
+/*Style for ContactUs*/
+.ContactUs{
+    display: flex;
+    background: url("images/banner-4.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+.ContactUs .title{
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+.ContactUs .Contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.ContactUs .Contact-content  .text{
+    color: red;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.ContactUs .Contact-content  p{
+    font-size: 18px;
+    text-align: center;
+
+}
+.ContactUs .Contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.ContactUs .Contact-content .row .info{
+    margin-left: 30px;
+}
+
+.ContactUs .Contact-content .info .head{
+    color: red;
+    font-weight: 600;
+    padding: 5px, 0;
+}
+.ContactUs .Contact-content .info .sub-title{
+    font-weight: 600;
+}
+
+/*Style for footer*/
+footer{
+    font-family: 'montserrat', sans-serif;
+    color: white;
+    background: black;
+    text-align: center;
+    padding: 30px 25px;
+}
+footer span a{
+    color: red;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+/* Responsive Media Querry */
+@media (max-width:1920px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+    .menu-btn{
+        display: none;
+        z-index: 999;
+    }
+}
+@media (max-width: 1104px){
+    .About .About-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .home .home-content .text-2{
+        font-size: 30px;
+    }
+    .home .home-content a{
+        font-size: 18px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .About .About-content .collumn{
+        width: 100%;
+    }
+    .About .About-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .About .About-content .right{
+        flex: 100%;
+    }
+    .Services .Services-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 35px;
+    }
+    .Skills .Skills-content .collumn,
+    .Contact .Contact-content .collumn{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .Services .Services-content .card{
+        width: 100%;
+    }
+}
+@media (max-width: 500px){
+    .Contact .right form .fields{
+        flex-direction: column;
+    }
+    .Contact .right form .name,
+    .Contact .right form .email{
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-6.25%);
+        -o-transform: translateX(-6.25%);
+        -ms-transform: translateX(-6.25%);
+        -moz-transform: translateX(-6.25%);
+        -webkit-transform: translateX(-6.25%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+        -o-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: .25;
+        transform: translateX(6.25%);
+        -o-transform: translateX(6.25%);
+        -ms-transform: translateX(6.25%);
+        -moz-transform: translateX(6.25%);
+        -webkit-transform: translateX(6.25%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+        -o-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+    }
+}

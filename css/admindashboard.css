@@ -1,0 +1,40 @@
+:root {
+    --offcanvas-width: 270px;
+    --topNavbarHeight: 56px;
+}
+
+#navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#offcanvasExample {
+    width: var(--offcanvas-width);
+}
+
+#table {
+    margin-left: calc(10px + var(--offcanvas-width)) !important;
+    padding-top: calc(10px + var(--topNavbarHeight)) !important;
+    margin-right: 10px !important;
+}
+
+#inner-content{
+    padding-bottom: 10%;
+}
+
+@media (min-width: 992px) {
+    body{
+        overflow: auto;
+    }
+    .offcanvas-backdrop::before {
+        display: none;
+    }
+    #offcanvasExample {
+        transform: none;
+        visibility: visible !important;
+        top: var(--topNavbarHeight);
+        height: calc(100% - var(--topNavbarHeight));
+    }
+
+}
