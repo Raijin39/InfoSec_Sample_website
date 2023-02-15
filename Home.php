@@ -25,6 +25,10 @@
 
         <?php include('include/about.php');?>
         <?php include('include/services.php');?>
+        <?php include('include/skills.php');?>
+        <?php include('include/comment.php');?>
+        <?php include('include/contact.php');?>
+        
     </main>
 
 <?php include('include/footer.php');?>
