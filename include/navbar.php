@@ -16,7 +16,7 @@
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
           <ul class="nav nav-pills ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="home.php" >Home</a>
+              <a class="nav-link active" href="index.php" >Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#About">About</a>
