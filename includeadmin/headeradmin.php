@@ -8,25 +8,9 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <link rel="stylesheet" href="css/admindashboard.css">
 
-    <link href="https://party-color-reservation-system.herokuapp.com/css/lib-styles.css" rel="stylesheet">
-    <link href="https://party-color-reservation-system.herokuapp.com/css/style.css" rel="stylesheet">
-    <link href="https://party-color-reservation-system.herokuapp.com/css/admin.css" rel="stylesheet">
-
-    <script type="text/javascript"
-        src="https://party-color-reservation-system.herokuapp.com/js/lib-scripts.js"></script>
-
     <script type="text/javascript"
         id="for-js-disabled-js">$('head').append('<style id="for-js-disabled">#js-disabled { display: none; }</style>'); $(document).ready(function () { $('#js-disabled').remove(); $('#for-js-disabled').remove(); $('#for-js-disabled-js').remove(); });</script>
 
-
-    <link rel="icon" href="https://party-color-reservation-system.herokuapp.com/uploads/settings/default.png">
-    <link rel="shortcut icon" href="https://party-color-reservation-system.herokuapp.com/uploads/settings/default.png">
-    <link rel="apple-touch-icon"
-        href="https://party-color-reservation-system.herokuapp.com/uploads/settings/default.png">
-    <link rel="mask-icon" href="https://party-color-reservation-system.herokuapp.com/uploads/settings/default.png">
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css">
 
     <!-- <title>Bootstrap Example</title> -->
