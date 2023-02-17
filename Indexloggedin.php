@@ -1,6 +1,6 @@
 <?php include('include/header.php');?>
 
-<?php include('include/navbar.php');?>
+<?php include('include/navbarloggedin.php');?>
 
  <!-- Scroll Spy Main Content -->
  <main
