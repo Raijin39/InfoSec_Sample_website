@@ -10,7 +10,7 @@
                         <a class="nav-link text-black" href="#">Messages</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#">Comments</a>
+                        <a class="nav-link text-black" href="#">Feedback</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-black" href="#">Posts</a>

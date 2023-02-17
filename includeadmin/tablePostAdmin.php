@@ -11,11 +11,6 @@
 
                         <div class="col-12 col-md-8">
                             <div class="row">
-
-                                <script type="text/javascript"
-                                    src="https://party-color-reservation-system.herokuapp.com/js/util/serialize-form-json.js"></script>
-                                <script type="text/javascript"
-                                    src="https://party-color-reservation-system.herokuapp.com/js/hooks/adminSearchHook.js"></script>
                                 </form>
                             </div>
                         </div>
@@ -27,11 +22,11 @@
 
         <h6>
             <span class="text-dark">Published</span> | <a
-                href="https://party-color-reservation-system.herokuapp.com/admin/announcements?d=1&sd=0"
+                href="#"
                 class="text-primary">Draft</a> | <a
-                href="https://party-color-reservation-system.herokuapp.com/admin/announcements?d=1&sd=1"
+                href="#"
                 class="text-primary">All</a> | <a
-                href="https://party-color-reservation-system.herokuapp.com/admin/announcements?d=0&sd=1"
+                href="#"
                 class="text-primary">Trashed</a>
         </h6>
 
@@ -69,17 +64,17 @@
                                 </button>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1">
-                                    <a href="https://party-color-reservation-system.herokuapp.com/admin/announcements/1?d=0&sd=0"
+                                    <a href="#"
                                         class="dropdown-item"><i class="fas fa-eye mr-2"></i>View</a>
-                                    <a href="https://party-color-reservation-system.herokuapp.com/admin/announcements/1/edit?d=0&sd=0"
+                                    <a href="#"
                                         class="dropdown-item"><i class="fas fa-pencil-alt mr-2"></i>Edit</a>
                                     <a href="javascript:void(0);"
-                                        onclick="confirmLeave('https://party-color-reservation-system.herokuapp.com/admin/announcements/1/unpublish?d=0&amp;sd=0', undefined, 'Unpublish this announcement');"
+                                        onclick="confirmLeave('#', undefined, 'Unpublish this announcement');"
                                         class="dropdown-item"><i class="fas fa-pencil-ruler mr-2"></i>Draft</a>
                                     <a href="javascript:void(0);"
-                                        onclick="confirmLeave('https://party-color-reservation-system.herokuapp.com/admin/announcements/1/delete?d=0&amp;sd=0', undefined, 'Are you sure you want to delete this?');"
+                                        onclick="confirmLeave('#', undefined, 'Are you sure you want to delete this?');"
                                         class="dropdown-item"><i class="fas fa-trash mr-2"></i>Trash</a>
-                                    <a onclick="confirmLeave('https://party-color-reservation-system.herokuapp.com/admin/announcements/1/perma-delete?d=0&amp;sd=0', undefined, 'Are you sure you want to permanently delete this?')"
+                                    <a onclick="confirmLeave('#', undefined, 'Are you sure you want to permanently delete this?')"
                                         class="dropdown-item"><i class="fas fa-fire-alt mr-2"></i>Delete</a>
                                 </div>
                             </div>
@@ -107,17 +102,17 @@
                                 </button>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1">
-                                    <a href="https://party-color-reservation-system.herokuapp.com/admin/announcements/1?d=0&sd=0"
+                                    <a href="#"
                                         class="dropdown-item"><i class="fas fa-eye mr-2"></i>View</a>
-                                    <a href="https://party-color-reservation-system.herokuapp.com/admin/announcements/1/edit?d=0&sd=0"
+                                    <a href="#"
                                         class="dropdown-item"><i class="fas fa-pencil-alt mr-2"></i>Edit</a>
                                     <a href="javascript:void(0);"
-                                        onclick="confirmLeave('https://party-color-reservation-system.herokuapp.com/admin/announcements/1/unpublish?d=0&amp;sd=0', undefined, 'Unpublish this announcement');"
+                                        onclick="confirmLeave('#', undefined, 'Unpublish this announcement');"
                                         class="dropdown-item"><i class="fas fa-pencil-ruler mr-2"></i>Draft</a>
                                     <a href="javascript:void(0);"
-                                        onclick="confirmLeave('https://party-color-reservation-system.herokuapp.com/admin/announcements/1/delete?d=0&amp;sd=0', undefined, 'Are you sure you want to delete this?');"
+                                        onclick="confirmLeave('#', undefined, 'Are you sure you want to delete this?');"
                                         class="dropdown-item"><i class="fas fa-trash mr-2"></i>Trash</a>
-                                    <a onclick="confirmLeave('https://party-color-reservation-system.herokuapp.com/admin/announcements/1/perma-delete?d=0&amp;sd=0', undefined, 'Are you sure you want to permanently delete this?')"
+                                    <a onclick="confirmLeave('#', undefined, 'Are you sure you want to permanently delete this?')"
                                         class="dropdown-item"><i class="fas fa-fire-alt mr-2"></i>Delete</a>
                                 </div>
                             </div>
