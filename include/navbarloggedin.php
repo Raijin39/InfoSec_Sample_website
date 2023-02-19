@@ -34,6 +34,9 @@
             <li class="nav-item">
               <a class="nav-link fw-semibold" href="#Contact">Contact</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="indextb4login.php">Log Out</a>
+            </li>
           </ul>
         </div>
     </nav>

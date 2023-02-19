@@ -1,6 +1,6 @@
-<?php include('include/header.php');?>
-
-<?php include('include/navbar.php');?>
+<?php $page_title = "Home Login";
+include('include/header.php');
+include('include/navbar.php');?>
 
  <!-- Scroll Spy Main Content -->
  <main
@@ -11,12 +11,12 @@
       class="scrollspy-example"
       tabindex="0"
     >
-        <?php include('include/home.php');?>
-        <?php include('include/about.php');?>
-        <?php include('include/services.php');?>
-        <?php include('include/skills.php');?>
-        <?php include('include/comment.php');?>
-        <?php include('include/contactlogin.php');?>
+        <?php include('include/home.php'); 
+        include('include/about.php'); 
+        include('include/services.php'); 
+        include('include/skills.php');
+        include('include/comment.php'); 
+        include('include/contactlogin.php');?>
         
     </main>
 
