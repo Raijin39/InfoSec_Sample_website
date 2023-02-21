@@ -1,6 +1,5 @@
 <?php $page_title = "Post";
-include('include/header.php');
-include('includeadmin/navbaradmin.php');?>
-<?php include('includeadmin/offcanvasadmin.php');?>
-<?php include('includeadmin/tablePostAdmin.php');?>
-<?php include('include/footer.php');?>
+include('includeadmin/headeradmin.php');
+include('includeadmin/offcanvasadmin.php');
+include('includeadmin/tablePostAdmin.php');
+include('includeadmin/footeradmin.php');?>
