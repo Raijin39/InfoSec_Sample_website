@@ -39,11 +39,32 @@
                         <th class="text-center">Password</th>
                         <th class="text-center">Phone Number</th>
                         <th class="text-center"></th>
-                    </tr>
-                </thead>
+                    </thead>
+                </tr>
+                    
+                    <tbody id="table-content">
+                       
+                        <?php
+                        include "db_conn.php";
+                    $sql = "SELECT * FROM 'tblusers'";
+                    $result = mysqli_query($conn,$sql);
+                    while ($row = mysqli_fetch_assoc($result)){
+                        ?>
+                        <tr class="enlarge-on-hover">
+                            <td class="text-center align-middle mx-auto font-weight-bold"><?php echo $row['username'] ?> </td>
+                            <td class="text-center align-middle mx-auto font-weight-bold"><?php echo $row['email'] ?> </td>
+                            <td class="text-center align-middle mx-auto"><?php echo $row['password'] ?> </td>
+                            <td class="text-center align-middle mx-auto"><?php echo $row['phone'] ?> </td>
+                            <td>
+                                <a href="edit.php?id= <?php echo $row ['id']?>" class="link-dark"> <i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+                                <a href="delete.php?id= <?php echo $row ['id']?>" class="link-dark"> <i class="fa-solid fa-trash fs-5"></i></a>
+                            </td>
+                        </tr>
+                        <?php
+                    }
+                ?>
 
-                <tbody id="table-content">
-                    <tr class="enlarge-on-hover">
+                    <!-- <tr class="enlarge-on-hover"> -->
                         <td class="text-center align-middle mx-auto font-weight-bold"><i
                                 class="text-success mr-2"></i>Name1</td>
                                 <td class="text-center align-middle mx-auto font-weight-bold"><i
@@ -74,9 +95,9 @@
                                 </div>
                             </div>
                         </td>
-                    </tr>
+                    <!-- </tr> -->
 
-                    <tr class="enlarge-on-hover">
+                    <!-- <tr class="enlarge-on-hover"> -->
                         <td class="text-center align-middle mx-auto font-weight-bold"><i
                                 class="text-success mr-2"></i>Name2</td>
                                 <td class="text-center align-middle mx-auto font-weight-bold"><i
@@ -107,7 +128,7 @@
                                 </div>
                             </div>
                         </td>
-                    </tr>
+                    <!-- </tr> -->
                 </tbody>
             </table>
         </div>
