@@ -8,7 +8,7 @@
 
             $sql= "INSERT INTO 'users' ('name', 'email', 'password')";
 
-            $query = mysql_query($conn,$sql);
+            $query = mysqli_query($conn,$sql);
             if($query){
                 echo 'Entry Successfull';
             }
