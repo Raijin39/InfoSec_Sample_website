@@ -38,8 +38,8 @@
                 Account
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="LoginForm.html">Sign In</a></li>
-                <li><a class="dropdown-item" href="LoginForm.html">Sign Up</a></li>
+                <li><a class="dropdown-item" href="LoginForm.php">Sign In</a></li>
+                <li><a class="dropdown-item" href="LoginForm.php?s=1">Sign Up</a></li>
               </ul>
             </li>
           </ul>

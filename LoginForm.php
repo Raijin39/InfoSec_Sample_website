@@ -125,7 +125,12 @@
       </div>
     </div>
 
-
     <script src="js/app.js"></script>
+    <?php if($_GET["s"] == 1): ?>
+    <script>
+      sign_up_btn.click();
+      document.getElementById("toRemove").remove();
+    </script>
+    <?php endif ?>
   </body>
-</html>
+</html> 
