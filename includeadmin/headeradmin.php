@@ -1,24 +1,7 @@
 <?php
-include "db_conn.php";
-
-if(isset($POST['submit'])){
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $phone = $_POST['phone'];
-
-    $sql = "INSERT INTO `tblusers`(`username`, `email`, `password`, `phone`) VALUES ('$username','$email','$password','$phone')";
-
-    $result = mysqli_query($conn, $sql);
-
-    if($result){
-        header("Location: index.php?msg=New recored created successfully");
-
-    }
-    else{
-        echo "Failed: ". mysqli_error($conn);
-    }
-}
+require_once('db_conn.php');
+$query = "SELECT * FROM `tblusers`";
+$result = mysqli_query($conn, $query);
 ?>
 
 

@@ -39,65 +39,28 @@
                         <th class="text-center">Password</th>
                         <th class="text-center">Phone Number</th>
                         <th class="text-center"></th>
-                    </thead>
-                </tr>
+                    </tr>
+                </thead>
                     
-                    <tbody id="table-content">
-                       
+                <tbody id="table-content">
+
+                    <tr class="enlarge-on-hover">
                         <?php
-                        include "db_conn.php";
-                    $sql = "SELECT * FROM 'tblusers'";
-                    $result = mysqli_query($conn,$sql);
-                    while ($row = mysqli_fetch_assoc($result)){
+
+                        while($row = mysqli_fetch_assoc($result))
+                        {
                         ?>
-                        <tr class="enlarge-on-hover">
-                            <td class="text-center align-middle mx-auto font-weight-bold"><?php echo $row['username'] ?> </td>
-                            <td class="text-center align-middle mx-auto font-weight-bold"><?php echo $row['email'] ?> </td>
-                            <td class="text-center align-middle mx-auto"><?php echo $row['password'] ?> </td>
-                            <td class="text-center align-middle mx-auto"><?php echo $row['phone'] ?> </td>
-                            <td>
-                                <a href="edit.php?id= <?php echo $row ['id']?>" class="link-dark"> <i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
-                                <a href="delete.php?id= <?php echo $row ['id']?>" class="link-dark"> <i class="fa-solid fa-trash fs-5"></i></a>
-                            </td>
+                            <td class="text-center align-middle mx-auto font-weight-bold"><?php echo $row['username']; ?></td>
+                            <td class="text-center align-middle mx-auto font-weight-bold"><?php echo $row['email']; ?></td>
+                            <td class="text-center align-middle mx-auto"><?php echo $row['password']; ?></td>
+                            <td class="text-center align-middle mx-auto"><?php echo $row['phone']; ?></td>
                         </tr>
                         <?php
-                    }
-                ?>
+                        }
 
-                    <!-- <tr class="enlarge-on-hover"> -->
-                        <td class="text-center align-middle mx-auto font-weight-bold"><i
-                                class="text-success mr-2"></i>Name1</td>
-                                <td class="text-center align-middle mx-auto font-weight-bold"><i
-                                class="text-success mr-2"></i>Email1</td>
-                        <td class="text-center align-middle mx-auto">Pass1</td>
-                        <td class="text-center align-middle mx-auto">Phone1</td>
+                        ?>
 
-                        <td class="align-middle">
-                            <div class="dropdown ">
-                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                                    id="dropdown1" aria-haspopup="true" aria-expanded="false">
-                                    Actions
-                                </button>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1">
-                                    <a href="#"
-                                        class="dropdown-item"><i class="fas fa-eye mr-2"></i>View</a>
-                                    <a href="#"
-                                        class="dropdown-item"><i class="fas fa-pencil-alt mr-2"></i>Edit</a>
-                                    <a href="javascript:void(0);"
-                                        onclick="confirmLeave('#', undefined, 'Unpublish this announcement');"
-                                        class="dropdown-item"><i class="fas fa-pencil-ruler mr-2"></i>Draft</a>
-                                    <a href="javascript:void(0);"
-                                        onclick="confirmLeave('#', undefined, 'Are you sure you want to delete this?');"
-                                        class="dropdown-item"><i class="fas fa-trash mr-2"></i>Trash</a>
-                                    <a onclick="confirmLeave('#', undefined, 'Are you sure you want to permanently delete this?')"
-                                        class="dropdown-item"><i class="fas fa-fire-alt mr-2"></i>Delete</a>
-                                </div>
-                            </div>
-                        </td>
-                    <!-- </tr> -->
-
-                    <!-- <tr class="enlarge-on-hover"> -->
+                    <tr class="enlarge-on-hover">
                         <td class="text-center align-middle mx-auto font-weight-bold"><i
                                 class="text-success mr-2"></i>Name2</td>
                                 <td class="text-center align-middle mx-auto font-weight-bold"><i
@@ -128,7 +91,7 @@
                                 </div>
                             </div>
                         </td>
-                    <!-- </tr> -->
+                    </tr>
                 </tbody>
             </table>
         </div>
