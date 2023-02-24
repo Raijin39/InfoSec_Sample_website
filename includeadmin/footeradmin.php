@@ -1,4 +1,4 @@
-
+</main>
     <script type="text/javascript">
         $(document).ready(function () {
             $(".col-a").click(function () {

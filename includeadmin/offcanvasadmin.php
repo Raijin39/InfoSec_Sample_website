@@ -4,7 +4,7 @@
             <div class="">
                 <ul class="nav nav-pills nav-fill flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                        <a class="nav-link active"  href="#">Dashboard</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link text-black" href="#">Messages</a>
@@ -16,7 +16,7 @@
                         <a class="nav-link text-black" href="#">Posts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#">Users</a>
+                        <a class="nav-link text-black" href="indexUsers.php">Users</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-black" href="#">Logout</a>
@@ -25,3 +25,11 @@
             </div>
         </div>
     </div>
+    <main
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example2"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+      class="scrollspy-example"
+      tabindex="0"
+    >
