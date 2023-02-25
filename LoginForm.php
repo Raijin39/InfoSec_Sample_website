@@ -41,7 +41,9 @@
               </a>
             </div>
           </form>
-          <form action=" " class="sign-up-form" method="post">
+
+
+          <form action="" class="sign-up-form" method="post">
             <h2 class="title">Sign up</h2>
             <i class="fas fa-user"></i>
             <input type="text" placeholder="First Name" name="signup_first_name" value="<?php echo $_POST["signup_first_name"]; ?>" required />
@@ -126,7 +128,7 @@
     </div>
 
     <script src="js/app.js"></script>
-    <?php if($_GET["s"] == 1): ?>
+    <?php if($_GET["sign-up-btn"] == 1): ?>
     <script>
       sign_up_btn.click();
       document.getElementById("toRemove").remove();
