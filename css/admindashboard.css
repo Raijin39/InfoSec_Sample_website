@@ -5,23 +5,24 @@
 
 #navbar{
     position: fixed;
+    margin-bottom: 5px;
     width: 100%;
     z-index: 1;
 }
 
 #contentNav{
     padding-top: var(--topNavbarHeight);
+    width: var(--offcanvas-width);
 }
 
 #offcanvasExample {
     width: var(--offcanvas-width);
 }
 
-/* #table {
-    margin-left: calc(10px + var(--offcanvas-width)) !important;
-    padding-top: calc(10px + var(--topNavbarHeight)) !important;
-    margin-right: 10px !important;
-} */
+#table {
+    width: 100%;
+    height: auto;
+}
 
 #inner-content{
     padding-bottom: 10%;
