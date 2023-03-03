@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "infosec_tables";
+$dbname = "infosec";
 
 $conn = mysqli_connect($servername,$username,$password,$dbname );
 

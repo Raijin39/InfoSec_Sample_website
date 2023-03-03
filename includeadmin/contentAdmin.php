@@ -2,10 +2,8 @@
 <!-- NAV starts -->
     <div class="nav flex-column nav-pills me-3 ps-5 pe-5 pt-1" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Dashboard</button>
-        <button class="nav-link" id="messages-tab" data-bs-toggle="pill" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Message</button>
-        <button class="nav-link" id="feedbacks-tab" data-bs-toggle="pill" data-bs-target="#feedbacks" type="button" role="tab" aria-controls="feedbacks" aria-selected="false">Feedback</button>
-        <button class="nav-link" id="posts-tab" data-bs-toggle="pill" data-bs-target="#posts" type="button" role="tab" aria-controls="posts" aria-selected="false">Post</button>
-        <button class="nav-link" id="users-tab" data-bs-toggle="pill" data-bs-target="#users" type="button" role="tab" aria-controls="users" aria-selected="false">Users</button>
+        <button class="nav-link" id="posts-tab" data-bs-toggle="pill" data-bs-target="#posts" type="button" role="tab" aria-controls="posts" aria-selected="false">Post Management</button>
+        <button class="nav-link" id="users-tab" data-bs-toggle="pill" data-bs-target="#users" type="button" role="tab" aria-controls="users" aria-selected="false">Users Management</button>
     </div>
 <!-- NAV ends-->
 <!-- CONTENT starts-->
@@ -14,24 +12,6 @@
         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
             <div class="col-md-12 fw-bold fs-3">Dashboard</div>
             <div class="row">
-                <div class="col-sm-6 mb-3 mb-sm-0" style="width: 18rem;">
-                    <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#messages" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-sm-6" style="width: 18rem;">
-                    <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#feedbacks" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                    </div>
-                </div>
                 <div class="col-sm-6 mb-3 mb-sm-0" style="width: 18rem;">
                     <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
                     <div class="card-body">
@@ -89,152 +69,6 @@
             </div>
         </div>
 <!-- Dashboard End -->
-<!-- tableMessage starts -->
-        <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab" tabindex="0">
-            <div class="container-center content flex-fill m-0 pt-2 pb-5" id="table">
-                <h3>Messages</h3> 
-                <div class="card dark-shadow overflow-x-scroll flex-fill mb-3" id="inner-content">
-                    <table class="table table-striped my-0">
-                        <thead>
-                            <tr>
-                                <th class="text-center">Name</th>
-                                <th class="text-center">Email</th>
-                                <th class="text-center">Message</th>
-                                <th class="text-center">Date</th>
-                                <th class="text-center"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center align-middle mx-auto font-weight-bold"><i
-                                        class="text-success mr-2"></i>Name1</td>
-                                <td class="text-center align-middle mx-auto">Email1</td>
-                                <td class="text-center align-middle mx-auto">
-                                    <button type="button" class="btn btn-primary" data-bs-container="body"
-                                        data-bs-toggle="popover" data-bs-placement="right"
-                                        data-bs-content="qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjkl;zxcvbnmwedryuyhbijnolmkzrxdtcyh bj4se5drfybhnijfufegwuasbxcuweigoyhsuyxocweyGACUOUCHBCGUOBHCOEUCBWEYFG">
-                                        View Message
-                                    </button>
-                                </td>
-                                <td class="text-center align-middle mx-auto">Jan 10, 2023</td>
-
-                                <td class="align-middle">
-                                    <div class="dropdown ">
-                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                                            id="dropdown1" aria-haspopup="true" aria-expanded="false">
-                                            Actions
-                                        </button>
-
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1">
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="text-center align-middle mx-auto font-weight-bold"><i
-                                        class="text-success mr-2"></i>Name2</td>
-                                <td class="text-center align-middle mx-auto">Email2</td>
-                                <td class="text-center align-middle mx-auto">
-                                    <button type="button" class="btn btn-primary" data-bs-container="body"
-                                        data-bs-toggle="popover" data-bs-placement="right"
-                                        data-bs-content="qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjkl;zxcvbnmwedryuyhbijnolmkzrxdtcyh bj4se5drfybhnijfufegwuasbxcuweigoyhsuyxocweyGACUOUCHBCGUOBHCOEUCBWEYFG">
-                                        View Message
-                                    </button>
-                                </td>
-                                <td class="text-center align-middle mx-auto">Jan 10, 2023</td>
-
-                                <td class="align-middle">
-                                    <div class="dropdown ">
-                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                                            id="dropdown1" aria-haspopup="true" aria-expanded="false">
-                                            Actions
-                                        </button>
-
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1">
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-<!-- tableMessage ends -->
-<!-- tableFeedback starts -->
-        <div class="tab-pane fade" id="feedbacks" role="tabpanel" aria-labelledby="feedbacks-tab" tabindex="0">
-            <div class="container-center content flex-fill m-0 pt-2 pb-5" id="table">
-                <h3>Feedbacks</h3> 
-                <div class="card dark-shadow overflow-x-scroll flex-fill mb-3" id="inner-content">
-                    <table class="table table-striped my-0">
-                        <thead>
-                            <tr>
-                                <th class="text-center">Name</th>
-                                <th class="text-center">Email</th>
-                                <th class="text-center">Message</th>
-                                <th class="text-center">Date</th>
-                                <th class="text-center"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center align-middle mx-auto font-weight-bold"><i
-                                        class="text-success mr-2"></i>Name1</td>
-                                <td class="text-center align-middle mx-auto">Email1</td>
-                                <td class="text-center align-middle mx-auto">
-                                    <button type="button" class="btn btn-primary" data-bs-container="body"
-                                        data-bs-toggle="popover" data-bs-placement="right"
-                                        data-bs-content="qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjkl;zxcvbnmwedryuyhbijnolmkzrxdtcyh bj4se5drfybhnijfufegwuasbxcuweigoyhsuyxocweyGACUOUCHBCGUOBHCOEUCBWEYFG">
-                                        View Message
-                                    </button>
-                                </td>
-                                <td class="text-center align-middle mx-auto">Jan 10, 2023</td>
-
-                                <td class="align-middle">
-                                    <div class="dropdown ">
-                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                                            id="dropdown1" aria-haspopup="true" aria-expanded="false">
-                                            Actions
-                                        </button>
-
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1">
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="text-center align-middle mx-auto font-weight-bold"><i
-                                        class="text-success mr-2"></i>Name2</td>
-                                <td class="text-center align-middle mx-auto">Email2</td>
-                                <td class="text-center align-middle mx-auto">
-                                    <button type="button" class="btn btn-primary" data-bs-container="body"
-                                        data-bs-toggle="popover" data-bs-placement="right"
-                                        data-bs-content="qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjkl;zxcvbnmwedryuyhbijnolmkzrxdtcyh bj4se5drfybhnijfufegwuasbxcuweigoyhsuyxocweyGACUOUCHBCGUOBHCOEUCBWEYFG">
-                                        View Message
-                                    </button>
-                                </td>
-                                <td class="text-center align-middle mx-auto">Jan 10, 2023</td>
-
-                                <td class="align-middle">
-                                    <div class="dropdown ">
-                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                                            id="dropdown1" aria-haspopup="true" aria-expanded="false">
-                                            Actions
-                                        </button>
-
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1">
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-<!-- tableFeedback ends -->
 <!-- tablePosts starts -->
         <div class="tab-pane fade" id="posts" role="tabpanel" aria-labelledby="posts-tab" tabindex="0">
             <div class="container-center content flex-fill m-0 pt-2 pb-5" id="table">
