@@ -1,7 +1,23 @@
 <?php
-require_once('db_conn.php');
+include "db_conn.php";
 $query = "SELECT * FROM `tblusers`";
 $result = mysqli_query($conn, $query);
+
+if (isset($_GET['email'])) {
+    $email = '" .$_GET["email"]. "';
+    $delete = mysqli_query($conn, "DELETE FROM `tblusers` WHERE 'email' = '" .$_GET["email"]. "'");
+    if($delete){
+        header("Location: index.php?msg=Record deleted successfully");
+    }
+    else {
+        echo "Failed: " . mysqli_error($conn);
+    }
+}
+
+if (isset($_GET['email'])) {
+    $email=$_GET['email'];
+    $delete=mysqli_query($conn, "DELETE FROM `tblusers` WHERE `email` = $email");
+}
 ?>
 
 
