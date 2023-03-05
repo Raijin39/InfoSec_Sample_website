@@ -1,11 +1,11 @@
 <?php
 include "db_conn.php";
-$query = "SELECT * FROM `tblusers`";
+$query = "SELECT * FROM `users`";
 $result = mysqli_query($conn, $query);
 
 if (isset($_GET['email'])) {
     $email = '" .$_GET["email"]. "';
-    $delete = mysqli_query($conn, "DELETE FROM `tblusers` WHERE 'email' = '" .$_GET["email"]. "'");
+    $delete = mysqli_query($conn, "DELETE FROM `users` WHERE 'email' = '" .$_GET["email"]. "'");
     if($delete){
         header("Location: index.php?msg=Record deleted successfully");
     }
@@ -16,7 +16,7 @@ if (isset($_GET['email'])) {
 
 if (isset($_GET['email'])) {
     $email=$_GET['email'];
-    $delete=mysqli_query($conn, "DELETE FROM `tblusers` WHERE `email` = $email");
+    $delete=mysqli_query($conn, "DELETE FROM `users` WHERE `email` = $email");
 }
 ?>
 
@@ -47,6 +47,8 @@ if (isset($_GET['email'])) {
             $('#example').DataTable();
         });
     </script>
+
+    
 </head>
 
 <body style="max-height: 100vh; height: 100vh;" class="overflow-y-hidden">

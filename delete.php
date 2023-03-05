@@ -3,15 +3,15 @@ include "db_conn.php";
 
 // Check if the delete button was clicked
 if (isset($_POST['delete'])) {
-    // Retrieve the row email from the form
-    $email = $_POST['email'];
+    // Retrieve the row id from the form
+    $id = $_POST['id'];
 
     // SQL query to delete the row
-    $sql = "DELETE FROM tblusers WHERE email = $email";
+    $sql = "DELETE FROM users WHERE id = $id";
 
     // Execute the query
     if (mysqli_query($conn, $sql)) {
-        echo "Row deleted successfully";
+        header('Location: indexAdmin.php?msg=Record deleted successfully');
     } else {
         echo "Error deleting row: " . mysqli_error($conn);
     }
