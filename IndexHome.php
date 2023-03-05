@@ -1,6 +1,6 @@
 <?php $page_title = "Home";
 include('include/header.php');
-include('include/navbarloggedin.php');?>
+include('include/navbar.php');?>
 
  <!-- Scroll Spy Main Content -->
  <main
@@ -15,7 +15,6 @@ include('include/navbarloggedin.php');?>
         include('include/about.php'); 
         include('include/services.php'); 
         include('include/skills.php');
-        include('include/comment.php'); 
         include('include/contact.php');?>
         
     </main>
