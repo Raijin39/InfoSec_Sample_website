@@ -4,58 +4,61 @@
             <div class="row">
                 <div class="col-sm-6 mb-3 mb-sm-0" style="width: 18rem;">
                     <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#posts" class="btn btn-primary">Go somewhere</a>
-                    </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a class="btn btn-primary" id="tab2Button">Go somewhere</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6" style="width: 18rem;">
                     <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#users" class="btn btn-primary">Go somewhere</a>
-                    </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a class="btn btn-primary" id="tab3Button">Go somewhere</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row"> 
                 <div class="row my-5">
-                    <h3 class="fs-2 mb-3"> dsadsad </h3>
-                    <div class ="col">
-                        <table class="table">
+                    <h3 class="fs-2 mb-3"> Users </h3>
+                    <div class ="col card dark-shadow overflow-x-scroll flex-fill mb-3">
+                        <table class="table table-hover">
                             <thead>
                                 <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">Name</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                </tr>
-                                <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                                </tr>
+                                <?php
+                                    $num = mysqli_num_rows($result);
+                                    if ($num>0) {
+                                        while ($fetch=mysqli_fetch_assoc($result)) {
+                                            echo "
+                                            <tr>
+                                                <td class='align-middle mx-auto font-weight-bold'>".$fetch['full_name']."</td>
+                                            </tr>
+                                            ";
+                                        }
+                                    }
+                                    $result->data_seek(0);
+                                ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+        $("#tab2Button").click(function() {
+            $('#v-pills-tab li:eq(1) button').tab('show');
+        })
+        </script>
+        <script>
+            $("#tab3Button").click(function() {
+            $('#v-pills-tab li:eq(2) button').tab('show');
+        })
+        </script>
 <!-- Dashboard End -->
