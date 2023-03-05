@@ -38,10 +38,10 @@
       <div class="row mx-auto mb-5 pb-5">
         <div class="p-2 fs-4 text-danger">Message Us</div>
         <div class="btn-group-vertical btn-group-lg " role="group" aria-label="Vertical button group">
-            <button type="button" class="btn btn-outline-success btn-lg">facebook</button>
-            <button type="button" class="btn btn-outline-danger btn-lg">Instagram</button>
-            <button type="button" class="btn btn-outline-warning btn-lg">Discord</button>
-            <button type="button" class="btn btn-outline-info btn-lg">Tweeter</button>
+            <a type="button" class="btn btn-outline-success btn-lg" href="https://www.facebook.com/markangelo.equias.1/">facebook</a>
+            <a type="button" class="btn btn-outline-danger btn-lg" href="https://www.instagram.com/ekoverse/">Instagram</a>
+            <a type="button" class="btn btn-outline-warning btn-lg" href="https://discord.gg/GeEMkdZa">Discord</a>
+            <a type="button" class="btn btn-outline-info btn-lg">Tweeter</a>
         </div>
       </div>
     </div>
