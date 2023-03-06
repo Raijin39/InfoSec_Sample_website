@@ -41,7 +41,7 @@
             <a type="button" class="btn btn-outline-success btn-lg" href="https://www.facebook.com/markangelo.equias.1/">facebook</a>
             <a type="button" class="btn btn-outline-danger btn-lg" href="https://www.instagram.com/ekoverse/">Instagram</a>
             <a type="button" class="btn btn-outline-warning btn-lg" href="https://discord.gg/GeEMkdZa">Discord</a>
-            <a type="button" class="btn btn-outline-info btn-lg">Tweeter</a>
+            <a type="button" class="btn btn-outline-info btn-lg" href="https://twitter.com/_clarisza?t=If6BeKQTpkP8C6Y29OQmTg&s=09">Tweeter</a>
         </div>
       </div>
     </div>

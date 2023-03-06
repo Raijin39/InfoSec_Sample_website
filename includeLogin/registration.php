@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION["user"])) {
-   header("Location: index.php");
+   header("Location: LoginForm.php");
 }
 ?>
 <!DOCTYPE html>
@@ -49,7 +49,7 @@ if (isset($_SESSION["user"])) {
            if (count($errors)>0) {
             foreach ($errors as  $error) {
                 echo "<div class='alert alert-danger'>$error</div>";
-                echo "<a href='indexAdmin.php'></a>";
+                echo "<a href='LoginForm.php'></a>";
             }
            }else{
             
@@ -60,7 +60,20 @@ if (isset($_SESSION["user"])) {
                 mysqli_stmt_bind_param($stmt,"sss",$fullName, $email, $passwordHash);
                 mysqli_stmt_execute($stmt);
                 
-                echo "<div class='alert alert-success'>You are registered successfully.</div>";
+                echo "<!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Registration Notification</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        You are registered successfully.
+                      </div>
+                    </div>
+                  </div>
+                </div>";
             }else{
                 die("Something went wrong");
             }
