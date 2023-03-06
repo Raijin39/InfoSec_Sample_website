@@ -28,14 +28,16 @@
                                 <td class="text-center align-middle mx-auto">アドミン アカウント</td>
 
                                 <td class="align-middle">
-                                    <div class="dropdown ">
-                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                                            id="dropdown1" aria-haspopup="true" aria-expanded="false">
-                                            Actions
-                                        </button>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        ACTION
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                        <li><a class="dropdown-item" href="#">Add</a></li>
 
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1">
-                                        </div>
+                                    </ul>
                                     </div>
                                 </td>
                             </tr>
@@ -54,14 +56,15 @@
                                 <td class="text-center align-middle mx-auto">Anon</td>
 
                                 <td class="align-middle">
-                                    <div class="dropdown ">
-                                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                                            id="dropdown1" aria-haspopup="true" aria-expanded="false">
-                                            Actions
-                                        </button>
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        ACTION
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                        <li><a class="dropdown-item" href="#">Add</a></li>
 
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown1">
-                                        </div>
+                                    </ul>
                                     </div>
                                 </td>
                             </tr>

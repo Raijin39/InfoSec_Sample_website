@@ -10,7 +10,7 @@
                 <td>
                 <form method='post' action='delete.php'>
                 <input type='hidden' name='id' value=" .$fetch['id']. ">
-                <button class='btn btn-danger' type='submit' name='delete'>Delete</button>
+                <button class='btn btn-danger' type='submit' name='delete'>Delete</button> 
                 </form>
             
                 </td>
