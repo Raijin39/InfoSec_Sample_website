@@ -1,7 +1,9 @@
 <?php
 include "db_conn.php";
-$query = "SELECT * FROM `users`";
-$result = mysqli_query($conn, $query);
+$queryUsers = "SELECT * FROM `users`";
+$queryPosts = "SELECT * FROM `post`";
+$resultUsers = mysqli_query($conn, $queryUsers);
+$resultPosts = mysqli_query($conn, $queryPosts);
 
 if (isset($_GET['email'])) {
     $email = '" .$_GET["email"]. "';

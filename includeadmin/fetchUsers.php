@@ -1,7 +1,7 @@
 <?php
-    $num = mysqli_num_rows($result);
+    $num = mysqli_num_rows($resultUsers);
     if ($num>0) {
-        while ($fetch=mysqli_fetch_assoc($result)) {
+        while ($fetch=mysqli_fetch_assoc($resultUsers)) {
             echo "
             <tr>
                 <td class='text-center align-middle mx-auto font-weight-bold'>".$fetch['full_name']."</td>
@@ -18,5 +18,5 @@
             ";
         }
     }
-    $result->data_seek(0);
+    $resultUsers->data_seek(0);
 ?>

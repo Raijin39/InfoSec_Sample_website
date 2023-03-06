@@ -6,68 +6,17 @@
                     <table class="table table-striped my-0">
                         <thead>
                             <tr>
-                                <th class="text-center">Title</th>
-                                <th class="text-center">Content</th>
-                                <th class="text-center">Published Date</th>
-                                <th class="text-center">Publisher</th>
-                                <th class="text-center"></th>
+                                <th class="text-center col-2">Title</th>
+                                <th class="text-center col-5">Content</th>
+                                <th class="text-center col-2">Published Date</th>
+                                <th class="text-center col-2">Publisher</th>
+                                <th class="text-center col-1"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="text-center align-middle mx-auto font-weight-bold"><i
-                                    class="text-success mr-2"></i>My First Post</td>
-                                <td class="text-center align-middle mx-auto">
-                                    <button type="button" class="btn btn-primary" data-bs-container="body"
-                                    data-bs-toggle="popover" data-bs-placement="right"
-                                    data-bs-content="qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjkl;zxcvbnmwedryuyhbijnolmkzrxdtcyh bj4se5drfybhnijfufegwuasbxcuweigoyhsuyxocweyGACUOUCHBCGUOBHCOEUCBWEYFG">
-                                    View Post
-                                    </button>
-                                </td>
-                                <td class="text-center align-middle mx-auto">Jan 13, 2023</td>
-                                <td class="text-center align-middle mx-auto">アドミン アカウント</td>
-
-                                <td class="align-middle">
-                                <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        ACTION
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#">Edit</a></li>
-                                        <li><a class="dropdown-item" href="#">Delete</a></li>
-                                        <li><a class="dropdown-item" href="#">Add</a></li>
-
-                                    </ul>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="text-center align-middle mx-auto font-weight-bold"><i
-                                    class="text-success mr-2"></i>My Second Post</td>
-                                <td class="text-center align-middle mx-auto">
-                                    <button type="button" class="btn btn-primary" data-bs-container="body"
-                                        data-bs-toggle="popover" data-bs-placement="right"
-                                        data-bs-content="qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjkl;zxcvbnmwedryuyhbijnolmkzrxdtcyh bj4se5drfybhnijfufegwuasbxcuweigoyhsuyxocweyGACUOUCHBCGUOBHCOEUCBWEYFG">
-                                        View Post
-                                    </button>
-                                </td>
-                                <td class="text-center align-middle mx-auto">Jan 13, 2023</td>
-                                <td class="text-center align-middle mx-auto">Anon</td>
-
-                                <td class="align-middle">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        ACTION
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#">Edit</a></li>
-                                        <li><a class="dropdown-item" href="#">Delete</a></li>
-                                        <li><a class="dropdown-item" href="#">Add</a></li>
-
-                                    </ul>
-                                    </div>
-                                </td>
-                            </tr>
+                            <?php
+                                include('includeadmin/fetchPosts.php');
+                            ?>
                         </tbody>
                     </table>
                 </div>
