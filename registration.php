@@ -37,7 +37,7 @@ if (isset($_SESSION["user"])) {
         } elseif ($password!==$passwordRepeat) {
             array_push($errors,"Password does not match");
         } else {
-            require_once "config.php";
+            require_once "includeLogin/config.php";
             $sql = "SELECT * FROM users WHERE email = '$email'";
             $result = mysqli_query($conn, $sql);
             $rowCount = mysqli_num_rows($result);
@@ -56,7 +56,7 @@ if (isset($_SESSION["user"])) {
                 if ($prepareStmt) {
                     mysqli_stmt_bind_param($stmt,"sss",$fullName, $email, $passwordHash);
                     mysqli_stmt_execute($stmt);
-                    echo "<div class='alert alert-success'>You are registered successfully.</div>";
+                    header("Location: indexAdmin.php"); //if sucessfully LOGIN
                 } else {
                     die("Something went wrong");
                 }
