@@ -1,8 +1,13 @@
 <?php
 session_start();
 if (!isset($_SESSION["user"])) {
-   header("Location: includeLogin/login.php");
-}
-?>
-<?php include('indexAdmin.php');  ?>
+   header("Location: login.php");
+   exit();
+} 
+else {
+    header("Location: indexAdmin.php"); //if sucessfully LOGIN
+    exit();
 
+} 
+
+?>
