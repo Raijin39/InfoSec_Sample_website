@@ -8,9 +8,9 @@
                 <td class='text-center align-middle mx-auto'>".$fetch['email']."</td>
                 <td class='text-center align-middle mx-auto'>".$fetch['password']."</td>
                 <td>
-                <form method='post' action='delete.php'>
+                <form method='post' action='deleteUsers.php'>
                 <input type='hidden' name='id' value=" .$fetch['id']. ">
-                <button class='btn btn-danger' type='submit' name='delete'>Delete</button> 
+                <button class='btn btn-danger' type='submit' name='deleteUsers'>Delete</button> 
                 </form>
             
                 </td>

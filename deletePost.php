@@ -2,12 +2,12 @@
 include "db_conn.php";
 
 // Check if the delete button was clicked
-if (isset($_POST['delete'])) {
+if (isset($_POST['deletePost'])) {
     // Retrieve the row id from the form
     $id = $_POST['id'];
 
     // SQL query to delete the row
-    $sql = "DELETE FROM users WHERE id = $id";
+    $sql = "DELETE FROM post WHERE id = $id";
 
     // Execute the query
     if (mysqli_query($conn, $sql)) {

@@ -14,11 +14,11 @@
                             Action
                         </button>
                         <ul class='dropdown-menu flex-column justify-content-center'>
-                            <li><a class='dropdown-item text-center' href='#'>Edit</a></li>
+                            <li><button class='dropdown-item text-center' href='#'>Edit</button></li>
                             <li>                
-                            <form method='post' action='delete.php'>
+                            <form method='post' action='deletePost.php'>
                             <input type='hidden' name='id' value=" .$fetch['id']. ">
-                            <a class='dropdown-item text-center' type='submit' name='delete'>Delete</a>
+                            <button class='dropdown-item text-center' type='submit' name='deletePost'>Delete</button>
                             </form>
                             </li>
                         </ul>
