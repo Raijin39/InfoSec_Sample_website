@@ -9,19 +9,12 @@
                 <td class='text-center align-middle mx-auto'>".$fetch['publish_date']."</td>
                 <td class='text-center align-middle mx-auto'>".$fetch['publisher']."</td>
                 <td>
-                    <div class='dropdown'>
-                        <button class='btn btn-primary dropdown-toggle' type='button' data-bs-toggle='dropdown' aria-expanded='false'>
-                            Action
-                        </button>
-                        <ul class='dropdown-menu flex-column justify-content-center'>
-                            <li><button class='dropdown-item text-center' href='#'>Edit</button></li>
-                            <li>                
-                            <form method='post' action='deletePost.php'>
+                    <div class='gap-2 d-md-flex justify-content-center align-items-center'> 
+                        <button type='button' class='btn btn-primary'><a class='text-decoration-none text-white' href='postedit.php?updateid=".$fetch['id']."'>Edit</a></button>
+                        <form method='post' action='deletePost.php'>
                             <input type='hidden' name='id' value=" .$fetch['id']. ">
-                            <button class='dropdown-item text-center' type='submit' name='deletePost'>Delete</button>
-                            </form>
-                            </li>
-                        </ul>
+                            <button class='btn btn-outline-danger' type='submit' name='deletePost'>Delete</button> 
+                        </form>
                     </div>
                 </td>
             </tr>
