@@ -1,33 +1,45 @@
 <?php
 session_start();
-require 'connection/connectionPost.php';
+if (isset($_SESSION["post"])) {
+   header("Location: indexAdmin.php"); //redirected to Dashboard once the ADMIN is registered
+}
 
         if (isset($_POST["submit"])) {
+           $title = $_POST["title"];
+           $content = $_POST["content"]; 
+           $publish_date = $_POST["publish_date"]; 
+           $publisher = $_POST["publisher"]; 
 
-                $title = mysqli_real_escape_string($con, $_POST['title']);
-                $content = mysqli_real_escape_string($con, $_POST['content']);
-                $publish_date = mysqli_real_escape_string($con, $_POST['publish_date']);
-                $publisher = mysqli_real_escape_string($con, $_POST['publisher']);
-            
-                $query = "INSERT INTO post (title,content,publish_date,publisher) VALUES ('$title','$content','$publish_date','$publisher')";
-            
-                $query_run = mysqli_query($con, $query);
-                if($query_run)
-                {
-                    $_SESSION['message'] = "Student Created Successfully";
-                    header("Location: addForm.php");
-                    exit(0);
+           if (empty($title) OR empty($content) OR empty($publishe_date) OR empty($publisher)) {
+            array_push($errors,"All fields are required");
+        } else {
+            require_once "connection/connectionPost.php";
+            $sql = "SELECT * FROM post WHERE title = '$title'";
+            $result = mysqli_query($conn, $sql);
+            $rowCount = mysqli_num_rows($result);
+            if ($rowCount>0) {
+                array_push($errors,"Title already exists!");
+            }
+            if (count($errors)>0) {
+                foreach ($errors as  $error) {
+                    echo "<div class='alert alert-danger'>$error</div>";
+                    echo "<a href='indexAdmin.php#post'></a>";
                 }
-                else
-                {
-                    $_SESSION['message'] = "Student Not Created";
-                    header("Location: addForm.php");
-                    exit(0);
+            } else {
+                $sql = "INSERT INTO post (title, content, publishe_date, publisher) VALUES ( ?, ?, ?, ? )";
+                $stmt = mysqli_stmt_init($conn);
+                $prepareStmt = mysqli_stmt_prepare($stmt,$sql);
+                if ($prepareStmt) {
+                    mysqli_stmt_bind_param($stmt,"sss",$title, $content, $publishe_date, $publisher);
+                    mysqli_stmt_execute($stmt);
+                    header("Location: indexAdmin.php#post");
+                } else {
+                    die("Something went wrong");
                 }
             }
-            
-            ?>
-           
+        }
+        }
+        ?>
 
 <!doctype html>
 <html lang="en">
