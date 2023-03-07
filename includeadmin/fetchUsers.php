@@ -7,14 +7,14 @@
                 <td class='text-center align-middle mx-auto font-weight-bold'>".$fetch['full_name']."</td>
                 <td class='text-center align-middle mx-auto'>".$fetch['email']."</td>
                 <td class='text-center align-middle mx-auto'>".$fetch['password']."</td>
-                <td>
-                <form method='post' action='deleteUsers.php'>
-                    <input type='hidden' name='id' value=" .$fetch['id']. ">
-                    <button type='button' class='btn btn-primary'><a class='text-decoration-none text-white' href='editusers.php?editid=".$fetch['id']."'>Edit</a></button>
-
-                    <button class='btn btn-danger' type='submit' name='deleteUsers'>Delete</button> 
-                </form>
-            
+                <td >
+                    <div class='gap-2 d-md-flex justify-content-center align-items-center'>
+                        <button type='button' class='btn btn-primary'><a class='text-decoration-none text-white' href='editusers.php?editid=".$fetch['id']."'>Edit</a></button>
+                        <form method='post' action='deletePost.php'>
+                            <input type='hidden' name='id' value=" .$fetch['id']. ">
+                            <button class='btn btn-outline-danger' type='submit' name='deletePost'>Delete</button> 
+                        </form>
+                    </div>
                 </td>
             </tr>
             ";
