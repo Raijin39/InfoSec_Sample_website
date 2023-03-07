@@ -1,22 +1,22 @@
 <?php
 include "db_conn.php";
- $id=$_GET['updateid'];
- $queryPosts = "SELECT * FROM `post` WHERE id=$id";
- $resultPosts = mysqli_query($conn, $queryPosts);
- $fetch=mysqli_fetch_assoc($resultPosts);
+ $id=$_GET['editid'];
+ $queryUsers = "SELECT * FROM `users` WHERE id=$id";
+ $resultUsers = mysqli_query($conn, $queryUsers);
+ $fetch=mysqli_fetch_assoc($resultUsers);
 
 if(isset($_POST['submit'])){
-    $username = $_POST['username'];
+    $full_name = $_POST['full_name'];
     $email =$_POST['email'];
     $password = $_POST['password'];
     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 
-    $sql="UPDATE user SET username= '$username', email='$email', password='$password' WHERE id=$id";
+    $sql="UPDATE `users` SET full_name= '$full_name', email='$email', password='$password' WHERE id=$id";
     $resultUpdate=mysqli_query($conn,$sql);
         if($resultUpdate){
             echo "Success";
-            header('location:indexAdmin.php');
+           // header('location:indexAdmin.php');
         }else{
             die(mysqli_error($conn));
         }
@@ -40,10 +40,10 @@ if(isset($_POST['submit'])){
         
         <div class="container"  style="padding-top:5%">
             <h3>Edit</h3>
-            <form method ="user" class="pe-5">
+            <form method ="users" class="pe-5">
                     <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" class="form-control" name="username" value="<?php echo $fetch['username']?>">
+                        <label>full_name</label>
+                        <input type="text" class="form-control" name="full_name" value="<?php echo $fetch['full_name']?>">
                     </div>
                     <div class="form-group">
                         <label>Email</label>
@@ -51,7 +51,7 @@ if(isset($_POST['submit'])){
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="text" class="form-control" name="password" value="<?php echo $fetch['password]']?>">
+                        <input type="text" class="form-control" name="password" value="<?php echo $fetch['password']?>">
                     </div>
                     
                     <div class="mt-2 me-2">
@@ -62,5 +62,5 @@ if(isset($_POST['submit'])){
         </div>
 <!-- Update Form Ends -->
     </body>
-    <?php $resultPosts->data_seek(0); ?>
+    <?php $resultUsers->data_seek(0); ?>
 </html>
