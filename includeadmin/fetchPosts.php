@@ -9,9 +9,12 @@
                 <td class='text-center align-middle mx-auto'>".$fetch['publish_date']."</td>
                 <td class='text-center align-middle mx-auto'>".$fetch['publisher']."</td>
                 <td>
-                    <div class='d-grid gap-2 d-md-flex justify-content-md-end'> 
-                    <button type='button' class='btn btn-outline-primary'><a href='postedit.php?updateid=".$fetch['id']."'>Edit</a></button>
-                    <button type='button' class='btn btn-outline-danger'>Delete</button>
+                    <div class='gap-2 d-md-flex justify-content-center align-items-center'> 
+                        <button type='button' class='btn btn-primary'><a class='text-decoration-none text-white' href='postedit.php?updateid=".$fetch['id']."'>Edit</a></button>
+                        <form method='post' action='deletePost.php'>
+                            <input type='hidden' name='id' value=" .$fetch['id']. ">
+                            <button class='btn btn-outline-danger' type='submit' name='deletePost'>Delete</button> 
+                        </form>
                     </div>
                 </td>
             </tr>
