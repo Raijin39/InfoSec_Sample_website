@@ -10,6 +10,8 @@
                 <td>
                 <form method='post' action='deleteUsers.php'>
                     <input type='hidden' name='id' value=" .$fetch['id']. ">
+                    <button type='button' class='btn btn-primary'><a class='text-decoration-none text-white' href='editusers.php?updateid=".$fetch['id']."'>Edit</a></button>
+
                     <button class='btn btn-danger' type='submit' name='deleteUsers'>Delete</button> 
                 </form>
             
