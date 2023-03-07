@@ -11,14 +11,14 @@ if(isset($_POST['submit'])){
     $publish_date = $_POST['publish_date'];
     $publisher = $_POST['publisher'];
 
-    $sql="UPDATE post SET title= $title, content='$content', publish_date='$publish_date', publisher='$publisher' WHERE id=$id";
+    $sql="UPDATE post SET title= '$title', content='$content', publish_date='$publish_date', publisher='$publisher' WHERE id=$id";
     $resultUpdate=mysqli_query($conn,$sql);
-    if($resultUpdate){
-        echo "Success";
-        header('location:indexAdmin.php');
-    }else{
-        die(mysqli_error($conn));
-    }
+        if($resultUpdate){
+            echo "Success";
+            header('location:indexAdmin.php');
+        }else{
+            die(mysqli_error($conn));
+        }
 }
 ?>
 
@@ -32,8 +32,8 @@ if(isset($_POST['submit'])){
         <link rel="stylesheet" href="css/admindashboard.css">
 
     </head>
-<!-- Update Form Starts -->
     <?php include("includeadmin/navbaradmin.php") ?>
+    <!-- Update Form Starts -->
     <body>
         
         <div class="container"  style="padding-top:5%">
