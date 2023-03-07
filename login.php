@@ -20,21 +20,22 @@ if (isset($_SESSION["user"])) {
 <body>
     <div class="container">
         <?php
-        if (isset($_POST["login"])) {
+        if (isset($_POST["login"])) { //POST to catch all the data that users will input
            $email = $_POST["email"];
            $password = $_POST["password"];
             require_once "includeLogin/config.php"; //database connection
-            $sql = "SELECT * FROM users WHERE email = '$email'";
+            $sql = "SELECT * FROM users WHERE email = '$email'"; //the email provided by the users in the registration SHOULD MATCH the email that will be inputted in the login
             $result = mysqli_query($conn, $sql);
-            $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
-            if ($user) {
+            $user = mysqli_fetch_array($result, MYSQLI_ASSOC); 
+            if ($user) { //Check in the database if the password matches the email address
                 if (password_verify($password, $user["password"])) {
                     session_start();
-                    $_SESSION["users"] = "yes"; 
-                    header("Location: indexAdmin.php"); //if sucessfully LOGIN
+                    $_SESSION["users"] = "yes"; //if it matches, it will allow the users to login
+                    header("Location: indexAdmin.php"); //proceed here if sucessfully LOGIN
                     die();
-                }else{
-                    echo "<div class='alert alert-danger'>Password does not match</div>";
+
+                }else{ //else it will have an error
+                    echo "<div class='alert alert-danger'>Password does not match</div>"; 
                 }
             }else{
                 echo "<div class='alert alert-danger'>Email does not match</div>";
@@ -42,17 +43,20 @@ if (isset($_SESSION["user"])) {
         }
         ?>
       <form action="login.php" method="post">
+      <div id="login-div" class="d-flex aligns-items-center justify-content-center" style="height:100px" >
+      <h1>LOGIN</h1>
+      </div>
         <div class="form-group">
             <input type="email" placeholder="Enter Email:" name="email" class="form-control">
         </div>
         <div class="form-group">
             <input type="password" placeholder="Enter Password:" name="password" class="form-control">
         </div>
-        <div class="form-btn">
-            <input type="submit" value="Login" name="login" class="btn btn-primary">
+        <div id="login-div" class="d-flex aligns-items-center justify-content-center" style="height:40px" >
+            <input type="submit" value="Login" name="login" class="btn btn-primary ">
         </div>
       </form>
-     <div><p>Not registered yet <a href="registration.php">Register Here</a></p></div>
+     <div class="d-flex aligns-items-center justify-content-center"><p>Not registered yet <a href="registration.php">Register Here</a></p></div> 
     </div>
 </body>
 </html>
