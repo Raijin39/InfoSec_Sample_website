@@ -11,10 +11,7 @@
                 <td>
                     <div class='gap-2 d-md-flex justify-content-center align-items-center'> 
                         <button type='button' class='btn btn-primary'><a class='text-decoration-none text-white' href='postedit.php?updateid=".$fetch['id']."'>Edit</a></button>
-                        <form method='post' action='deletePost.php'>
-                            <input type='hidden' name='id' value=" .$fetch['id']. ">
-                            <button class='btn btn-outline-danger' type='submit' name='deletePost'>Delete</button> 
-                        </form>
+                        <button type='button' class='btn btn-outline-danger'>Delete</button>
                     </div>
                 </td>
             </tr>
