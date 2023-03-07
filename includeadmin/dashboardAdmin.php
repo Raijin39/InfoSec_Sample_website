@@ -1,22 +1,22 @@
 <!-- Dashboard Start -->
 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
             <div class="col-md-12 fw-bold fs-3">Dashboard</div>
-            <div class="row">
-                <div class="col-sm-6 mb-3 mb-sm-0" style="width: 18rem;">
-                    <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-6 mb-3 mb-sm-0" style="width: 35rem;">
+                    <div class="card text-bg-primary mb-3" style="width: 30rem; height: 12rem;">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a class="btn btn-primary" id="tab2Button">Go somewhere</a>
+                            <h5 class="card-title">Post Mannagement</h5>
+                            <p class="card-text">Take control of your content: Streamline your workflow and optimize your productivity with our user-friendly dashboard for seamless post management.</p>
+                            <a class="btn btn-primary" id="tab2Button">Go to Post</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6" style="width: 18rem;">
-                    <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+                <div class="col-lg-6" style="width: 35rem;">
+                    <div class="card text-bg-primary mb-3" style="width: 30rem; height: 12rem;">
                         <div class="card-body">
-                            <h5 class="card-title">Special title treatment</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a class="btn btn-primary" id="tab3Button">Go somewhere</a>
+                            <h5 class="card-title">User Mannagement</h5>
+                            <p class="card-text">Complete control over user details: Our user management tools empower admins to easily update user names and email addresses, ensuring accurate and up-to-date user information.</p>
+                            <a class="btn btn-primary" id="tab3Button">Go to Users</a>
                         </div>
                     </div>
                 </div>

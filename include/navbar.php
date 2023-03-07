@@ -28,9 +28,6 @@
           <a class="nav-link" href="#Skills">Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#Comment">Comment</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="#Contact">Contact</a>
         </li>
       </ul>
