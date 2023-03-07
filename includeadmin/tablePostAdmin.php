@@ -1,7 +1,9 @@
+
 <!-- tablePosts starts -->
 <div class="tab-pane fade" id="posts" role="tabpanel" aria-labelledby="posts-tab" tabindex="0">
             <div class="container-center content flex-fill m-0 pt-2 pb-5" id="table">
-                <h3>Posts</h3> 
+                <h3>Posts <a href="addContent.php" class="btn btn-primary float-end">Add Post</a></h3> 
+                
                 <div class="card dark-shadow overflow-x-scroll flex-fill mb-3" id="inner-content">
                     <table class="table table-striped my-0">
                         <thead>

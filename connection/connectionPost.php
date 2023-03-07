@@ -1,11 +1,11 @@
+
+
 <?php
-$hostName = "localhost";
-$dbUser = "root";
-$dbPassword = "";
-$dbName = "infosec";
-$conn = mysqli_connect($hostName, $dbUser, $dbPassword, $dbName);
-if (!$conn) {
-    die("Something went wrong;");
+
+$con = mysqli_connect("localhost","root","","infosec");
+
+if(!$con){
+    die('Connection Failed'. mysqli_connect_error());
 }
 
 ?>
