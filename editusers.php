@@ -12,11 +12,11 @@ if(isset($_POST['submit'])){
     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 
-    $sql="UPDATE `users` SET full_name= '$full_name', email='$email', password='$password' WHERE id=$id";
+    $sql="UPDATE users SET full_name= '$full_name', email='$email', password='$password' WHERE id=$id";
     $resultUpdate=mysqli_query($conn,$sql);
         if($resultUpdate){
             echo "Success";
-           // header('location:indexAdmin.php');
+            header('location:indexAdmin.php');
         }else{
             die(mysqli_error($conn));
         }
@@ -40,7 +40,7 @@ if(isset($_POST['submit'])){
         
         <div class="container"  style="padding-top:5%">
             <h3>Edit</h3>
-            <form method ="users" class="pe-5">
+            <form method ="post" class="pe-5">
                     <div class="form-group">
                         <label>full_name</label>
                         <input type="text" class="form-control" name="full_name" value="<?php echo $fetch['full_name']?>">
