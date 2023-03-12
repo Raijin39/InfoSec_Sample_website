@@ -13,6 +13,7 @@ include('include/navbar.php');?>
     >
         <?php include('include/home.php'); 
         include('include/about.php'); 
+        include('include/post.php');
         include('include/services.php'); 
         include('include/skills.php');
         include('include/contact.php');?>
