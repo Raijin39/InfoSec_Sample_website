@@ -22,6 +22,9 @@
           <a class="nav-link" href="#About">About</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#post">Announcement</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#Services">Services</a>
         </li>
         <li class="nav-item">

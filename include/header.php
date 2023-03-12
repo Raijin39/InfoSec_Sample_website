@@ -1,3 +1,9 @@
+<?php
+include "db_conn.php";
+$queryPosts = "SELECT * FROM `post`";
+$resultPosts = mysqli_query($conn, $queryPosts);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
