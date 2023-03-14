@@ -4,9 +4,6 @@ if (isset($_SESSION["users"])) {
    header("Location: indexAdmin.php"); //redirected to Dashboard once the user is logged in
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

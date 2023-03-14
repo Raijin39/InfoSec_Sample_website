@@ -4,28 +4,12 @@ $queryUsers = "SELECT * FROM `users`";
 $queryPosts = "SELECT * FROM `post`";
 $resultUsers = mysqli_query($conn, $queryUsers);
 $resultPosts = mysqli_query($conn, $queryPosts);
-
-if (isset($_GET['email'])) {
-    $email = '" .$_GET["email"]. "';
-    $delete = mysqli_query($conn, "DELETE FROM `users` WHERE 'email' = '" .$_GET["email"]. "'");
-    if($delete){
-        header("Location: index.php?msg=Record deleted successfully");
-    }
-    else {
-        echo "Failed: " . mysqli_error($conn);
-    }
-}
-
-if (isset($_GET['email'])) {
-    $email=$_GET['email'];
-    $delete=mysqli_query($conn, "DELETE FROM `users` WHERE `email` = $email");
-}
 ?>
 
 <?php
 session_start();
 if (!isset($_SESSION["users"])) {
-   header("Location: LoginForm.php"); //redirected to Dashboard once the user is logged in
+   header("Location: login.php"); //redirected to Dashboard once the user is logged in
 }
 ?>
 
