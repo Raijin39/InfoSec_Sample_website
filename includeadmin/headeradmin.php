@@ -22,6 +22,13 @@ if (isset($_GET['email'])) {
 }
 ?>
 
+<?php
+session_start();
+if (!isset($_SESSION["users"])) {
+   header("Location: LoginForm.php"); //redirected to Dashboard once the user is logged in
+}
+?>
+
 
 <!doctype html>
 <html lang="en">

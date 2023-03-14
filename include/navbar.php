@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav id="navbar-example2" class="navbar sticky-top navbar-expand-lg bg-info px-3" data-bs-theme="dark">
   <div class="container">
-    <a class="navbar-brand fw-bolder" href="LoginForm.php">INFORMATION ASSURANCE & SECURITY</a>
+    <a class="navbar-brand fw-bolder" href="login.php">INFORMATION ASSURANCE & SECURITY</a>
     <button
       class="navbar-toggler collapsed"
       type="button"

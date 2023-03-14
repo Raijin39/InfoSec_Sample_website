@@ -4,6 +4,14 @@ $queryPosts = "SELECT * FROM `post`";
 $resultPosts = mysqli_query($conn, $queryPosts);
 
 ?>
+
+<?php
+session_start();
+if (isset($_SESSION["user"])) {
+   header("Location: indexAdmin.php"); //redirected to Dashboard once the user is logged in
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

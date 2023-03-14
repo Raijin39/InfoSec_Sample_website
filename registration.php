@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION["user"])) {
+if (isset($_SESSION["users"])) {
    header("Location: indexAdmin.php"); //redirected to Dashboard once the ADMIN is registered
 }
 
@@ -47,7 +47,7 @@ if (isset($_SESSION["user"])) {
             if (count($errors)>0) {
                 foreach ($errors as  $error) {
                     echo "<div class='alert alert-danger'>$error</div>";
-                    echo "<a href='LoginForm.php'></a>";
+                    echo "<a href='login.php'></a>";
                 }
             } else {
                 $sql = "INSERT INTO users (full_name, email, password) VALUES ( ?, ?, ? )";

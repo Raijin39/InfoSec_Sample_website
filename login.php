@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION["user"])) {
+if (isset($_SESSION["users"])) {
    header("Location: indexAdmin.php"); //redirected to Dashboard once the user is logged in
 }
 ?>
