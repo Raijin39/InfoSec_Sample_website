@@ -20,39 +20,86 @@ if (isset($_SESSION["users"])) {
 <body>
     <div class="container">
         <?php
+        $delay = 0;
+        $disabled = '';
+        $max_attempts = 5;
+        
         if (isset($_POST["login"])) {
            $email = $_POST["email"];
            $password = $_POST["password"];
-            require_once "includeLogin/config.php"; //database connection
+            require_once "includeLogin/config.php";
             $sql = "SELECT * FROM users WHERE email = '$email'";
             $result = mysqli_query($conn, $sql);
             $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
             if ($user) {
                 if (password_verify($password, $user["password"])) {
-                    session_start();
                     $_SESSION["users"] = "yes"; 
-                    header("Location: indexAdmin.php"); //if sucessfully LOGIN
+                    header("Location: indexAdmin.php"); 
                     die();
                 }else{
-                    echo "<div class='alert alert-danger'>Password does not match</div>";
+                    if(isset($_SESSION['login_attempts'])){
+                        $_SESSION['login_attempts']++;
+                    } else {
+                        $_SESSION['login_attempts'] = 1;
+                    }
+            
+                    if($_SESSION['login_attempts'] >= $max_attempts){
+                        $disabled = 'disabled';
+                        $delay = 5000;
+                    } else {
+                        $disabled = '';
+                        $delay = 0;
+                    }
+                    echo "<div class='alert alert-danger'>Email or Password is incorrect.</div>";
                 }
             }else{
-                echo "<div class='alert alert-danger'>Email does not match</div>";
+                if(isset($_SESSION['login_attempts'])){
+                    $_SESSION['login_attempts']++;
+                } else {
+                    $_SESSION['login_attempts'] = 1;
+                }
+        
+                if($_SESSION['login_attempts'] >= $max_attempts){
+                    $disabled = 'disabled';
+                    $delay = 5000;
+                } else {
+                    $disabled = '';
+                    $delay = 0;
+                }
+                echo "<div class='alert alert-danger'>Email or Password is incorrect.</div>";
             }
         }
         ?>
-      <form action="login.php" method="post">
-        <div class="form-group">
-            <input type="email" placeholder="Enter Email:" name="email" class="form-control">
+        <form action="login.php" method="post">
+            <div id="login-div" class="d-flex aligns-items-center justify-content-center" style="height:100px" >
+            <h1>LOGIN</h1>
+            </div>
+
+            <div class="form-group">
+                <input id="email" type="email" placeholder="Enter Email:" name="email" class="form-control" <?php echo $disabled; ?>>
+            </div>
+            <div class="form-group">
+                <input id="password" type="password" placeholder="Enter Password:" name="password" class="form-control" <?php echo $disabled; ?>>
+            </div>
+            <div class="form-btn">
+                <div id="login-div" class="d-flex aligns-items-center justify-content-center" style="height:40px" >
+                <input id="loginbtn" type="submit" value="Login" name="login" class="btn btn-primary" <?php echo $disabled; ?>>
+            </div>
+        </form>
+        <div class="d-flex aligns-items-center justify-content-center"><p>Not registered yet <a href="registration.php">Register Here</a></p></div> 
         </div>
-        <div class="form-group">
-            <input type="password" placeholder="Enter Password:" name="password" class="form-control">
-        </div>
-        <div class="form-btn">
-            <input type="submit" value="Login" name="login" class="btn btn-primary">
-        </div>
-      </form>
-     <div><p>Not registered yet <a href="registration.php">Register Here</a></p></div>
+
+        <?php
+        if($delay > 0){
+            echo '<script>';
+            echo 'setTimeout(function() {';
+            echo 'document.getElementById("email").removeAttribute("disabled");';
+            echo 'document.getElementById("password").removeAttribute("disabled");';
+            echo 'document.getElementById("loginbtn").removeAttribute("disabled");';
+            echo '}, ' . $delay . ');';
+            echo '</script>';
+        }
+        ?>
     </div>
 </body>
 </html>
