@@ -71,6 +71,10 @@ if (isset($_SESSION["users"])) {
         }
         ?>
         <form action="login.php" method="post">
+            <div id="login-div" class="d-flex aligns-items-center justify-content-center" style="height:100px" >
+            <h1>LOGIN</h1>
+            </div>
+
             <div class="form-group">
                 <input id="email" type="email" placeholder="Enter Email:" name="email" class="form-control" <?php echo $disabled; ?>>
             </div>
@@ -78,9 +82,12 @@ if (isset($_SESSION["users"])) {
                 <input id="password" type="password" placeholder="Enter Password:" name="password" class="form-control" <?php echo $disabled; ?>>
             </div>
             <div class="form-btn">
+                <div id="login-div" class="d-flex aligns-items-center justify-content-center" style="height:40px" >
                 <input id="loginbtn" type="submit" value="Login" name="login" class="btn btn-primary" <?php echo $disabled; ?>>
             </div>
         </form>
+        <div class="d-flex aligns-items-center justify-content-center"><p>Not registered yet <a href="registration.php">Register Here</a></p></div> 
+        </div>
 
         <?php
         if($delay > 0){
@@ -93,7 +100,6 @@ if (isset($_SESSION["users"])) {
             echo '</script>';
         }
         ?>
-     <div><p>Not registered yet <a href="registration.php">Register Here</a></p></div>
     </div>
 </body>
 </html>
