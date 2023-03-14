@@ -5,6 +5,8 @@ if (isset($_SESSION["users"])) {
 }
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,26 +19,45 @@ if (isset($_SESSION["users"])) {
 </head>
 <body>
     <div class="container">
+
+    
         <?php
         if (isset($_POST["submit"])) {
            $fullName = $_POST["fullname"];
            $email = $_POST["email"];
            $password = $_POST["password"];
+                            $uppercase = preg_match('@[A-Z]@', $password);
+                            $lowercase = preg_match('@[a-z]@', $password);
+                            $number    = preg_match('@[0-9]@', $password);
+                            $specialChars = preg_match('@[^\w]@', $password);
            $passwordRepeat = $_POST["repeat_password"];
            
            $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+                          
 
            $errors = array();
            
            if (empty($fullName) OR empty($email) OR empty($password) OR empty($passwordRepeat)) {
             array_push($errors,"All fields are required");
-        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        } 
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             array_push($errors, "Email is not valid");
-        } elseif (strlen($password)<8) {
-            array_push($errors,"Password must be at least 8 charactes long");
-        } elseif ($password!==$passwordRepeat) {
+        } 
+        //fucking error
+        if (empty($password)) {
+            array_push($errors, "Please input a password");
+        } else if (strlen($password) < 8) {
+            array_push($errors, "Password must be at least 8 characters");
+        } else if (!preg_match('/[A-Z]/', $password)) {
+            array_push($errors, "Password must have at least one upper case letter");
+        } else if (!preg_match('/[a-z]/', $password)) {
+            array_push($errors, "Password must have at least one lower case letter");
+        } else if (!preg_match('/[^\w]/', $password) || !preg_match('/[0-9]/', $password)) {
+            array_push($errors, "Password must have special characters and numbers");
+        }
+        if ($password!==$passwordRepeat) {
             array_push($errors,"Password does not match");
-        } else {
+        } 
             require_once "includeLogin/config.php";
             $sql = "SELECT * FROM users WHERE email = '$email'";
             $result = mysqli_query($conn, $sql);
@@ -62,9 +83,11 @@ if (isset($_SESSION["users"])) {
                 }
             }
         }
-    }
+    
         ?>
         <form action="registration.php" method="post">
+        <div id="login-div" class="d-flex aligns-items-center justify-content-center" style="height:100px" >
+         <h1>REGISTRATION</h1></div>
             <div class="form-group">
                 <input type="text" class="form-control" name="fullname" placeholder="Full Name:">
             </div>
@@ -77,13 +100,28 @@ if (isset($_SESSION["users"])) {
             <div class="form-group">
                 <input type="password" class="form-control" name="repeat_password" placeholder="Repeat Password:">
             </div>
+            
             <div class="form-btn">
+            <div class="d-flex aligns-items-center justify-content-center"> 
+
                 <input type="submit" class="btn btn-primary" value="Register" name="submit">
             </div>
         </form>
         <div>
+        <div class="d-flex aligns-items-center justify-content-center"> 
         <div><p>Already Registered <a href="login.php">Login Here</a></p></div>
-      </div>
-    </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
