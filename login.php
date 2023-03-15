@@ -1,7 +1,11 @@
 <?php
+header("X-XSS-Protection: 1; mode=block");
+?>
+<?php
 session_start();
 if (isset($_SESSION["users"])) {
-   header("Location: indexAdmin.php"); //redirected to Dashboard once the user is logged in
+   header("Location: indexAdmin.php");
+   header('X-Frame-Options: DENY'); //redirected to Dashboard once the user is logged in
 }
 ?>
 <!DOCTYPE html>

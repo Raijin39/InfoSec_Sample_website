@@ -1,6 +1,7 @@
 <?php $page_title = "Home";
 include('include/header.php');
-include('include/navbar.php');?>
+include('include/navbar.php');
+?>
 
  <!-- Scroll Spy Main Content -->
  <main

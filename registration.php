@@ -1,7 +1,13 @@
 <?php
+$server_version = "2.4.54";
+header("Server: MyServer/{$server_version}");
+?>
+
+<?php
 session_start();
 if (isset($_SESSION["users"])) {
-   header("Location: indexAdmin.php"); //redirected to Dashboard once the ADMIN is registered
+   header("Location: indexAdmin.php");
+   header('X-Frame-Options: DENY'); //redirected to Dashboard once the ADMIN is registered
 }
 
 ?>
